@@ -1,0 +1,62 @@
+
+> customer-lead-crm-ui@0.0.0 start
+> ng serve --host 127.0.0.1 --port 4301
+
+- Generating browser application bundles (phase: setup)...
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                            |  Raw Size
+vendor.js                                                                                               | vendor                                           |   3.58 MB |
+styles.css, styles.js                                                                                   | styles                                           | 459.38 kB |
+polyfills.js                                                                                            | polyfills                                        | 252.55 kB |
+main.js                                                                                                 | main                                             |  45.51 kB |
+runtime.js                                                                                              | runtime                                          |  12.64 kB |
+
+| Initial Total                                    |   4.33 MB
+
+Lazy Chunk Files                                                                                        | Names                                            |  Raw Size
+default-node_modules_angular_material_fesm2022_input_mjs.js                                             | features-login-login-component                   | 526.10 kB |
+src_app_features_follow-ups_follow-ups_component_ts.js                                                  | features-follow-ups-follow-ups-component         | 367.94 kB |
+default-node_modules_angular_material_fesm2022_table_mjs.js                                             | features-dashboard-dashboard-component           | 188.75 kB |
+default-src_app_core_services_crud-api_service_ts-node_modules_angular_material_fesm2022_dialog_mjs.js  | features-lead-types-lead-types-component         | 116.60 kB |
+src_app_features_lead-types_lead-types_component_ts.js                                                  | features-lead-types-lead-types-component         | 106.10 kB |
+default-src_app_core_services_customer-lead_service_ts-node_modules_angular_material_fesm2022-d75a96.js | features-customer-leads-customer-leads-component |  83.75 kB |
+src_app_features_customer-leads_customer-leads_component_ts.js                                          | features-customer-leads-customer-leads-component |  46.54 kB |
+default-node_modules_angular_material_fesm2022_card_mjs.js                                              | features-login-login-component                   |  36.27 kB |
+src_app_features_dashboard_dashboard_component_ts.js                                                    | features-dashboard-dashboard-component           |  34.22 kB |
+src_app_features_notes_notes_component_ts.js                                                            | features-notes-notes-component                   |  33.94 kB |
+src_app_features_reminders_reminders_component_ts.js                                                    | features-reminders-reminders-component           |  23.92 kB |
+src_app_features_login_login_component_ts.js                                                            | features-login-login-component                   |  17.23 kB |
+common.js                                                                                               | common                                           |   3.46 kB |
+
+Build at: 2026-07-09T03:14:33.956Z - Hash: e431fd54654e9b93 - Time: 76707ms
+
+** Angular Live Development Server is listening on 127.0.0.1:4301, open your browser on http://127.0.0.1:4301/ **
+
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 45.80 kB |
+runtime.js          | runtime | 12.64 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T03:15:53.749Z - Hash: db7100ef907c2d6a - Time: 7671ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-09T03:31:49.438Z - Hash: db7100ef907c2d6a - Time: 9974ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-09T03:31:52.295Z - Hash: db7100ef907c2d6a - Time: 2074ms
+
+√ Compiled successfully.
