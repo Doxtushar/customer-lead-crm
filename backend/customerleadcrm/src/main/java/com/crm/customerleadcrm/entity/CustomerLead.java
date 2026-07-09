@@ -4,10 +4,7 @@ import com.crm.customerleadcrm.entity.base.BaseEntity;
 import com.crm.customerleadcrm.enums.LeadStatus;
 import com.crm.customerleadcrm.enums.Priority;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+// Lombok annotations removed because this class provides explicit constructors and accessor methods
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,10 +12,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "customer_lead")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class CustomerLead extends BaseEntity {
 
     @Id
@@ -72,13 +65,11 @@ public class CustomerLead extends BaseEntity {
     @OneToMany(mappedBy = "customerLead", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Note> notes = new ArrayList<>();
 
-    // Default Constructor
+    
+    // Explicit no-args constructor required by mappers and JPA
     public CustomerLead() {
     }
 
-    // Parameterized Constructor
-    // Note: It is a best practice to omit managed collections (like followUps and notes) from the constructor 
-    // to allow Hibernate to manage them properly.
     public CustomerLead(Long id, String customerName, String mobile, String alternateNumber, String email, 
                         LeadType leadType, String city, String address, String requirement, String leadSource, 
                         User assignedExecutive, String discussionDetails, LocalDate visitDate, 
