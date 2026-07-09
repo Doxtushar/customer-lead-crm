@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.crm.customerleadcrm.enums.LeadStatus;
 
+import java.time.LocalDateTime;
 import java.time.YearMonth;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -102,7 +103,10 @@ public class DashboardServiceImpl implements DashboardService {
         Map<String, Long> monthlyCounts = allLeads.stream()
                 .filter(l -> l.getCreatedAt() != null)
                 .collect(Collectors.groupingBy(
-                        l -> YearMonth.from(l.getCreatedAt()).toString(),  // Format: 2026-01
+                        l -> {
+                            LocalDateTime createdAt = l.getCreatedAt();
+                            return createdAt != null ? YearMonth.from(createdAt.toLocalDate()).toString() : "UNKNOWN";
+                        },
                         LinkedHashMap::new,  // Maintain insertion order
                         Collectors.counting()
                 ));
@@ -125,7 +129,12 @@ public class DashboardServiceImpl implements DashboardService {
 
         // Recent Leads - using configurable limit
         List<CustomerLeadDto> recentLeads = allLeads.stream()
-                .sorted(Comparator.comparing(CustomerLead::getCreatedAt).reversed())
+                .sorted((a, b) -> {
+                    LocalDateTime dateA = a.getCreatedAt();
+                    LocalDateTime dateB = b.getCreatedAt();
+                    if (dateA == null || dateB == null) return 0;
+                    return dateB.compareTo(dateA);  // Reverse order (most recent first)
+                })
                 .limit(recentLeadsLimit)
                 .map(CustomerLeadMapper::toDto)
                 .collect(Collectors.toList());
