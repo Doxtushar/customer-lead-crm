@@ -1,14 +1,17 @@
 export const environment = {
   production: true,
-  backendUrl: 'http://localhost:8080',
-  apiUrl: 'http://localhost:8080/api',
+
+  backendUrl: 'https://customer-lead-crm-backend-g5xh.onrender.com',
+
+  apiUrl: 'https://customer-lead-crm-backend-g5xh.onrender.com/api',
+
   api: {
-    login: 'http://localhost:8080/api/login',
-    dashboard: 'http://localhost:8080/api/dashboard',
-    leadTypes: 'http://localhost:8080/api/lead-types',
-    customerLeads: 'http://localhost:8080/api/customer-leads',
-    followUps: 'http://localhost:8080/api/follow-ups',
-    notes: 'http://localhost:8080/api/notes',
-    users: 'http://localhost:8080/api/users'
+    login: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/login',
+    dashboard: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/dashboard',
+    leadTypes: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/lead-types',
+    customerLeads: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/customer-leads',
+    followUps: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/follow-ups',
+    notes: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/notes',
+    users: 'https://customer-lead-crm-backend-g5xh.onrender.com/api/users'
   }
 };
