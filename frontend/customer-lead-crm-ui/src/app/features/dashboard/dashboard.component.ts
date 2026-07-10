@@ -20,11 +20,19 @@ import { DashboardService } from '../../core/services/dashboard.service';
     </header>
 
     <section class="stats">
-      <mat-card *ngFor="let stat of stats" class="stat-card">
-        <mat-icon>{{ stat.icon }}</mat-icon>
+      <mat-card *ngFor="let stat of stats; let index = index" class="stat-card">
+        <div class="stat-icon"><mat-icon>{{ stat.icon }}</mat-icon></div>
         <div>
           <span>{{ stat.label }}</span>
           <strong>{{ stat.value }}</strong>
+          <small>Updated from CRM data</small>
+        </div>
+      </mat-card>
+      <mat-card class="stat-card skeleton-card" *ngIf="!stats.length">
+        <div class="skeleton-icon"></div>
+        <div>
+          <span class="skeleton-line short"></span>
+          <strong class="skeleton-line"></strong>
         </div>
       </mat-card>
     </section>
@@ -33,6 +41,7 @@ import { DashboardService } from '../../core/services/dashboard.service';
       <div class="panel chart-panel">
         <div class="table-toolbar">
           <strong>Lead Status</strong>
+          <span class="panel-chip">Pipeline mix</span>
         </div>
         <div class="bar-chart">
           <div class="bar-row" *ngFor="let item of leadStatusChart">
@@ -49,6 +58,7 @@ import { DashboardService } from '../../core/services/dashboard.service';
       <div class="panel chart-panel">
         <div class="table-toolbar">
           <strong>Follow Up Status</strong>
+          <span class="panel-chip">Activity health</span>
         </div>
         <div class="donut-wrap">
           <div class="donut" [style.background]="donutBackground">
@@ -65,6 +75,7 @@ import { DashboardService } from '../../core/services/dashboard.service';
     <section class="panel mt-3">
       <div class="table-toolbar">
         <strong>Monthly Leads</strong>
+        <span class="panel-chip">Trend</span>
       </div>
       <div class="column-chart">
         <div class="column" *ngFor="let item of monthlyChart">
@@ -73,6 +84,23 @@ import { DashboardService } from '../../core/services/dashboard.service';
           <span>{{ item.label }}</span>
         </div>
         <div class="empty-state" *ngIf="!monthlyChart.length">No monthly chart data.</div>
+      </div>
+    </section>
+
+    <section class="panel mt-3">
+      <div class="table-toolbar">
+        <strong>Recent Activity</strong>
+        <span class="panel-chip">Live feed</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let lead of summary?.recentLeads ?? []">
+          <span class="timeline-dot"></span>
+          <div>
+            <strong>{{ lead.customerName }}</strong>
+            <p><span class="status-chip">{{ lead.status }}</span> created {{ lead.createdAt | date:'mediumDate' }}</p>
+          </div>
+        </div>
+        <div class="empty-state" *ngIf="!(summary?.recentLeads?.length)">No recent activity yet.</div>
       </div>
     </section>
 
@@ -106,21 +134,33 @@ import { DashboardService } from '../../core/services/dashboard.service';
   `,
   styles: [`
     .stats { display: grid; grid-template-columns: repeat(4, minmax(180px, 1fr)); gap: 16px; }
-    .stat-card { display: flex; flex-direction: row; gap: 14px; align-items: center; padding: 18px; border: 1px solid #e1e7ef; border-radius: 8px; box-shadow: 0 18px 48px rgba(15,23,42,.08); }
-    .stat-card mat-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg, #e8f2ff, #dcfce7); color: #175cd3; font-size: 26px; }
+    .stat-card { position: relative; overflow: hidden; display: flex; flex-direction: row; gap: 14px; align-items: center; min-height: 134px; padding: 20px; border: 1px solid rgba(255,255,255,.78); border-radius: 22px; background: rgba(255,255,255,.86); box-shadow: 0 14px 42px rgba(15,23,42,.08); }
+    .stat-card::after { content: ''; position: absolute; inset: auto 16px 0 16px; height: 4px; border-radius: 999px 999px 0 0; background: linear-gradient(90deg, #2563eb, #06b6d4); }
+    .stat-card:nth-child(2)::after { background: linear-gradient(90deg, #7c3aed, #ec4899); }
+    .stat-card:nth-child(3)::after { background: linear-gradient(90deg, #f79009, #ef4444); }
+    .stat-card:nth-child(4)::after { background: linear-gradient(90deg, #12b76a, #06b6d4); }
+    .stat-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 16px; background: linear-gradient(135deg, #eaf1ff, #ecfeff); color: #175cd3; box-shadow: inset 0 0 0 1px rgba(37,99,235,.12); }
+    .stat-card mat-icon { font-size: 26px; width: 26px; height: 26px; margin: 0; }
     .stat-card span { display: block; color: #667085; font-size: 13px; }
     .stat-card strong { display: block; margin-top: 4px; font-size: 28px; color: #111827; letter-spacing: 0; }
+    .stat-card small { display: block; margin-top: 6px; color: #98a2b3; font-size: 12px; font-weight: 700; }
+    .skeleton-card { animation: pulse 1.3s ease-in-out infinite; }
+    .skeleton-icon, .skeleton-line { display: block; border-radius: 999px; background: linear-gradient(90deg, #eef2f7, #f8fafc, #eef2f7); }
+    .skeleton-icon { width: 48px; height: 48px; border-radius: 16px; }
+    .skeleton-line { width: 150px; height: 18px; margin-top: 10px; }
+    .skeleton-line.short { width: 94px; height: 13px; }
     .chart-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .8fr); gap: 16px; }
     .chart-panel { min-height: 280px; }
+    .panel-chip { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border-radius: 999px; background: #eef6ff; color: #175cd3; font-size: 12px; font-weight: 900; }
     .bar-chart { display: grid; gap: 14px; padding: 18px; }
     .bar-row { display: grid; grid-template-columns: 120px 1fr 42px; gap: 12px; align-items: center; }
     .bar-row span { color: #475467; font-weight: 600; overflow-wrap: anywhere; }
     .bar-row strong { text-align: right; }
-    .track { height: 12px; overflow: hidden; border-radius: 999px; background: #edf2f7; }
-    .track i { display: block; height: 100%; min-width: 4px; border-radius: inherit; background: linear-gradient(90deg, #175cd3, #22c55e); box-shadow: 0 6px 18px rgba(23,92,211,.24); }
+    .track { height: 12px; overflow: hidden; border-radius: 999px; background: #edf2f7; box-shadow: inset 0 1px 2px rgba(15,23,42,.06); }
+    .track i { display: block; height: 100%; min-width: 4px; border-radius: inherit; background: linear-gradient(90deg, #2563eb, #06b6d4, #12b76a); box-shadow: 0 6px 18px rgba(37,99,235,.24); }
     .donut-wrap { min-height: 220px; display: grid; place-items: center; gap: 14px; padding: 20px; }
-    .donut { width: 152px; height: 152px; display: grid; place-items: center; border-radius: 50%; position: relative; }
-    .donut::after { content: ''; position: absolute; inset: 24px; border-radius: 50%; background: #fff; }
+    .donut { width: 166px; height: 166px; display: grid; place-items: center; border-radius: 50%; position: relative; box-shadow: 0 16px 44px rgba(15,23,42,.12); }
+    .donut::after { content: ''; position: absolute; inset: 26px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 1px rgba(126,143,166,.12); }
     .donut span { position: relative; z-index: 1; font-size: 30px; font-weight: 800; color: #111827; }
     .legend { display: flex; gap: 18px; color: #475467; font-weight: 600; }
     .legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -129,8 +169,14 @@ import { DashboardService } from '../../core/services/dashboard.service';
     .legend .completed { background: #22c55e; }
     .column-chart { min-height: 280px; display: flex; align-items: flex-end; gap: 14px; padding: 24px 18px 18px; overflow-x: auto; }
     .column { min-width: 64px; height: 220px; display: grid; grid-template-rows: 24px 1fr 24px; align-items: flex-end; justify-items: center; color: #475467; font-weight: 700; }
-    .column i { width: 38px; min-height: 5px; border-radius: 8px 8px 0 0; background: linear-gradient(180deg, #22c55e, #175cd3); box-shadow: 0 8px 18px rgba(23,92,211,.18); }
+    .column i { width: 38px; min-height: 5px; border-radius: 999px 999px 8px 8px; background: linear-gradient(180deg, #67e8f9, #2563eb); box-shadow: 0 8px 18px rgba(37,99,235,.18); }
     .column span { align-self: center; font-size: 12px; white-space: nowrap; }
+    .timeline { display: grid; padding: 8px 22px 20px; }
+    .timeline-item { position: relative; display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid #edf1f7; }
+    .timeline-item:last-child { border-bottom: 0; }
+    .timeline-dot { width: 12px; height: 12px; margin-top: 6px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #12b76a); box-shadow: 0 0 0 6px #eef6ff; }
+    .timeline-item strong { display: block; color: #111827; }
+    .timeline-item p { margin: 6px 0 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: #667085; }
     @media (max-width: 1100px) { .stats { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
     @media (max-width: 620px) {
@@ -138,6 +184,7 @@ import { DashboardService } from '../../core/services/dashboard.service';
       .bar-row { grid-template-columns: 1fr; gap: 6px; }
       .bar-row strong { text-align: left; }
     }
+    @keyframes pulse { 50% { opacity: .62; } }
   `]
 })
 export class DashboardComponent implements OnInit {

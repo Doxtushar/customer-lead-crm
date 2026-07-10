@@ -58,7 +58,12 @@ import { NotificationService } from '../../core/services/notification.service';
         <table mat-table [dataSource]="reminders">
           <ng-container matColumnDef="customerName">
             <th mat-header-cell *matHeaderCellDef>Customer</th>
-            <td mat-cell *matCellDef="let row">{{ customerName(row.customerLeadId) }}</td>
+            <td mat-cell *matCellDef="let row">
+              <div class="reminder-customer">
+                <span><mat-icon>person_pin</mat-icon></span>
+                <strong>{{ customerName(row.customerLeadId) }}</strong>
+              </div>
+            </td>
           </ng-container>
           <ng-container matColumnDef="nextFollowUpDate">
             <th mat-header-cell *matHeaderCellDef>Due Date</th>
@@ -85,10 +90,16 @@ import { NotificationService } from '../../core/services/notification.service';
   `,
   styles: [`
     .reminder-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .reminder-summary { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 8px; }
-    .reminder-summary mat-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg, #fff7ed, #fee2e2); color: #c2410c; font-size: 26px; }
+    .reminder-summary { position: relative; overflow: hidden; display: flex; align-items: center; gap: 14px; padding: 20px; border-radius: 22px; }
+    .reminder-summary::after { content: ''; position: absolute; inset: auto 16px 0 16px; height: 4px; border-radius: 999px 999px 0 0; background: linear-gradient(90deg, #f79009, #ef4444); }
+    .reminder-summary:nth-child(2)::after { background: linear-gradient(90deg, #2563eb, #06b6d4); }
+    .reminder-summary:nth-child(3)::after { background: linear-gradient(90deg, #12b76a, #06b6d4); }
+    .reminder-summary mat-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 16px; background: linear-gradient(135deg, #fff7ed, #fee2e2); color: #c2410c; font-size: 26px; }
     .reminder-summary span { display: block; color: #667085; }
     .reminder-summary strong { display: block; margin-top: 4px; font-size: 30px; color: #101828; }
+    .reminder-customer { display: flex; align-items: center; gap: 12px; }
+    .reminder-customer span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: #eef6ff; color: #175cd3; }
+    .reminder-customer mat-icon { width: 21px; height: 21px; font-size: 21px; }
     @media (max-width: 760px) { .reminder-grid { grid-template-columns: 1fr; } }
   `]
 })

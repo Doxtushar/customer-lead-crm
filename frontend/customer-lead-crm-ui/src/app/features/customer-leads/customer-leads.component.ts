@@ -72,7 +72,7 @@ import { UserService } from '../../core/services/user.service';
           </ng-container>
           <ng-container matColumnDef="priority">
             <th mat-header-cell *matHeaderCellDef>Priority</th>
-            <td mat-cell *matCellDef="let row">{{ row.priority || '-' }}</td>
+            <td mat-cell *matCellDef="let row"><span class="priority-badge">{{ row.priority || '-' }}</span></td>
           </ng-container>
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef></th>
@@ -90,7 +90,7 @@ import { UserService } from '../../core/services/user.service';
   `,
   styles: [`
     .customer-cell { display: flex; align-items: center; gap: 12px; }
-    .avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background: linear-gradient(135deg, #175cd3, #22c55e); color: #fff; font-size: 13px; font-weight: 900; }
+    .avatar { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 15px; background: linear-gradient(135deg, #2563eb, #06b6d4, #12b76a); color: #fff; font-size: 13px; font-weight: 900; box-shadow: 0 10px 24px rgba(37,99,235,.22); }
     .customer-cell strong, .customer-cell small { display: block; line-height: 1.35; }
   `]
 })

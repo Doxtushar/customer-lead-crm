@@ -87,9 +87,9 @@ import { NotificationService } from '../../core/services/notification.service';
   `,
   styles: [`
     .activity-cell { display: flex; align-items: center; gap: 12px; }
-    .activity-cell span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: #ecfdf3; color: #16a34a; }
+    .activity-cell span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: linear-gradient(135deg, #ecfdf3, #ecfeff); color: #16a34a; box-shadow: inset 0 0 0 1px rgba(18,183,106,.14); }
     .activity-cell mat-icon { font-size: 21px; width: 21px; height: 21px; }
-    .mode-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border-radius: 8px; background: #f2f4f7; color: #344054; font-size: 12px; font-weight: 800; }
+    .mode-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border-radius: 999px; background: #f2f4f7; color: #344054; font-size: 12px; font-weight: 800; }
   `]
 })
 export class FollowUpsComponent implements OnInit {

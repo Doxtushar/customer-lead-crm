@@ -20,8 +20,8 @@ import { LoadingService } from '../../core/services/loading.service';
       z-index: 1000;
       display: grid;
       place-items: center;
-      background: rgba(255, 255, 255, .55);
-      backdrop-filter: blur(1px);
+      background: rgba(255, 255, 255, .56);
+      backdrop-filter: blur(8px);
     }
   `]
 })

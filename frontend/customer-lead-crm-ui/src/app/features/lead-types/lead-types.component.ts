@@ -75,7 +75,7 @@ import { NotificationService } from '../../core/services/notification.service';
   `,
   styles: [`
     .entity-cell { display: flex; align-items: center; gap: 12px; }
-    .entity-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: #e8f2ff; color: #175cd3; }
+    .entity-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: linear-gradient(135deg, #eaf1ff, #ecfeff); color: #175cd3; box-shadow: inset 0 0 0 1px rgba(37,99,235,.12); }
     .entity-icon mat-icon { font-size: 21px; width: 21px; height: 21px; }
   `]
 })

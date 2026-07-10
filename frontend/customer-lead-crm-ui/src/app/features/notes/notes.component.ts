@@ -81,9 +81,8 @@ import { NotificationService } from '../../core/services/notification.service';
   `,
   styles: [`
     .note-title { display: flex; align-items: center; gap: 12px; }
-    .note-title span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: #fff7ed; color: #c2410c; }
+    .note-title span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: linear-gradient(135deg, #fff7ed, #fff0f0); color: #c2410c; box-shadow: inset 0 0 0 1px rgba(247,144,9,.14); }
     .note-title mat-icon { font-size: 21px; width: 21px; height: 21px; }
-    .note-preview { display: block; max-width: 520px; overflow: hidden; color: #475467; text-overflow: ellipsis; white-space: nowrap; }
     @media (max-width: 720px) { .note-preview { max-width: 260px; } }
   `]
 })

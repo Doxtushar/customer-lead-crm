@@ -60,3 +60,497 @@ Build at: 2026-07-09T03:31:49.438Z - Hash: db7100ef907c2d6a - Time: 9974ms
 Build at: 2026-07-09T03:31:52.295Z - Hash: db7100ef907c2d6a - Time: 2074ms
 
 √ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                            | Names                                            | Raw Size
+main.js                                                        | main                                             | 46.06 kB |
+runtime.js                                                     | runtime                                          | 12.64 kB |
+
+Lazy Chunk Files                                               | Names                                            | Raw Size
+src_app_features_customer-leads_customer-leads_component_ts.js | features-customer-leads-customer-leads-component | 46.54 kB |
+
+15 unchanged chunks
+
+Build at: 2026-07-09T15:21:10.842Z - Hash: 101c4dc992d19028 - Time: 20465ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 46.06 kB |
+runtime.js          | runtime | 12.64 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T15:21:14.083Z - Hash: 529e284ab220eced - Time: 3073ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-09T15:54:17.501Z - Hash: 529e284ab220eced - Time: 7690ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-09T15:54:29.201Z - Hash: dc99cd94a34eff43 - Time: 10089ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 52.52 kB |
+runtime.js          | runtime | 12.64 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T15:55:17.687Z - Hash: cab9e749f7b78e83 - Time: 3664ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 29.21 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T15:56:36.034Z - Hash: 4320049e4fbaa2d7 - Time: 12599ms
+
+./src/app/features/login/login.component.ts-15.css?ngResource!=!./node_modules/@ngtools/webpack/src/loaders/inline-resource.js!./src/app/features/login/login.component.ts - Warning: Module Warning (from ./node_modules/postcss-loader/dist/cjs.js):
+(32:36) from "autoprefixer" plugin: end value has mixed support, consider using flex-end instead
+
+Code:
+  align-items: end
+
+
+
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                  | Names                                  | Raw Size
+runtime.js                                           | runtime                                | 12.64 kB |
+
+Lazy Chunk Files                                     | Names                                  | Raw Size
+src_app_features_dashboard_dashboard_component_ts.js | features-dashboard-dashboard-component | 46.44 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T15:58:56.121Z - Hash: 7758be46f9f4ad73 - Time: 50277ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                            | Names                                            | Raw Size
+runtime.js                                                     | runtime                                          | 12.64 kB |
+
+Lazy Chunk Files                                               | Names                                            | Raw Size
+src_app_features_customer-leads_customer-leads_component_ts.js | features-customer-leads-customer-leads-component | 46.72 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T16:00:41.485Z - Hash: 557624a2b49e5b8a - Time: 5415ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                    | Names                                    |  Raw Size
+main.js                                                | main                                     |  52.52 kB |
+runtime.js                                             | runtime                                  |  12.64 kB |
+
+Lazy Chunk Files                                       | Names                                    |  Raw Size
+src_app_features_follow-ups_follow-ups_component_ts.js | features-follow-ups-follow-ups-component | 368.15 kB |
+src_app_features_lead-types_lead-types_component_ts.js | features-lead-types-lead-types-component | 106.30 kB |
+src_app_features_notes_notes_component_ts.js           | features-notes-notes-component           |  33.71 kB |
+
+13 unchanged chunks
+
+Build at: 2026-07-09T16:00:50.692Z - Hash: a55d262877aca858 - Time: 9065ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                  | Names                                  | Raw Size
+runtime.js                                           | runtime                                | 12.64 kB |
+
+Lazy Chunk Files                                     | Names                                  | Raw Size
+src_app_features_reminders_reminders_component_ts.js | features-reminders-reminders-component | 26.49 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T16:01:18.315Z - Hash: 2799051dda0768fc - Time: 4244ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 29.22 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T16:04:03.520Z - Hash: 3228b69c2c94bd36 - Time: 5621ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.51 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-09T17:04:08.210Z - Hash: f7c6e7fb2082eec7 - Time: 103661ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:43:28.563Z - Hash: 8e1cc503ca183d7b - Time: 28177ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-10T01:43:37.450Z - Hash: 8e1cc503ca183d7b - Time: 8330ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:44:16.402Z - Hash: a883c260075bc593 - Time: 8422ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-10T01:44:28.651Z - Hash: a883c260075bc593 - Time: 4433ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:44:59.605Z - Hash: f7c6e7fb2082eec7 - Time: 4769ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:45:10.797Z - Hash: 5d35fcd3f4d24553 - Time: 10700ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:45:19.666Z - Hash: f7c6e7fb2082eec7 - Time: 7717ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:45:34.730Z - Hash: a60999b6bb2af4c9 - Time: 7590ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+18 unchanged chunks
+
+Build at: 2026-07-10T01:45:37.579Z - Hash: a60999b6bb2af4c9 - Time: 2653ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.64 kB |
+
+17 unchanged chunks
+
+Build at: 2026-07-10T01:46:09.970Z - Hash: 17e2a6139ba29cad - Time: 6603ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 31.84 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:54:12.780Z - Hash: de0b88e6886e58c0 - Time: 6962ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 31.86 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:54:17.168Z - Hash: 547d1e1ec1e12f4a - Time: 4241ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.45 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:54:20.177Z - Hash: 694e65cb0f05899f - Time: 2350ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.60 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:55:22.832Z - Hash: b36453e137aadbeb - Time: 2698ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.54 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:55:27.164Z - Hash: a3469a0704a3addb - Time: 2270ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.54 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:55:32.814Z - Hash: 5b8d7f5352a7be3e - Time: 2381ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.65 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:56:04.818Z - Hash: a5cbfd12b3d0bc55 - Time: 2976ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.69 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:56:09.268Z - Hash: 1293a96eadf757a1 - Time: 2170ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.69 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:58:10.030Z - Hash: b1927f36792c3f00 - Time: 4187ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.73 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:13.551Z - Hash: d0c7ccf01882492a - Time: 3315ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.76 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:18.670Z - Hash: af9c2b12b6a85773 - Time: 2275ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.78 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:26.392Z - Hash: 005a618df1394bc5 - Time: 1947ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.77 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:28.943Z - Hash: ab607274b942b59d - Time: 1952ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.73 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:33.994Z - Hash: cb45ffe5d10b176a - Time: 2430ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.69 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:36.859Z - Hash: b61b18e9859b0a85 - Time: 2748ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.73 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:42.829Z - Hash: f752f0460a99a10f - Time: 3427ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.74 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:47.274Z - Hash: 27458c81c35db8a2 - Time: 2383ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.81 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T01:59:55.693Z - Hash: 155885cf02f6e1c3 - Time: 2197ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                          | Names                          | Raw Size
+runtime.js                                   | runtime                        | 12.64 kB |
+
+Lazy Chunk Files                             | Names                          | Raw Size
+src_app_features_login_login_component_ts.js | features-login-login-component | 32.82 kB |
+
+16 unchanged chunks
+
+Build at: 2026-07-10T02:00:00.077Z - Hash: 14f92c6d2491a2c8 - Time: 2546ms
+
+√ Compiled successfully.
